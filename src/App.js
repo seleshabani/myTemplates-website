@@ -1,12 +1,20 @@
 import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
-import './App.css';
+import Footer from './components/Footer/index';
+import Header from './components/Header';
 import { Home } from './pages/Home';
 
 function App() {
   return (
-    <Switch>
-      <Route path={"/"} exact component={Home}/>
-    </Switch>
+    <>
+      <main>
+        <Header/>
+        <Switch>
+        <Route exact path={"/"} component={Home}/>
+        </Switch>
+      </main>
+      <Footer/>
+    </>
+    
   );
 }
 
