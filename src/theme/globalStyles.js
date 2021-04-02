@@ -7,8 +7,10 @@ html{
 body{
     padding: 0;
     margin: 0;
-    position: relative;
     background-color: rgb(179, 197, 206);
+}
+body #root{
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     align-content: center;

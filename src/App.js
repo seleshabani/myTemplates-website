@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import Footer from './components/Footer/index';
 import Header from './components/Header';
-import { Home } from './pages/Home';
+import { Home } from './pages/Home/index';
 
 function App() {
   return (
