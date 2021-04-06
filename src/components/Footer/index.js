@@ -4,7 +4,7 @@ const Footer = ()=>{
     return (
         <FooterContainer>
             <div>
-                <a href="https://seleshabani.github.io/html_Templates/portfolio_v5">&copy;Sele Shabani &middot;2021</a>
+                <a target="_blank" rel="noreferrer" href="https://seleshabani.github.io/html_Templates/portfolio_v5">&copy;Sele Shabani &middot;2021</a>
             </div>
         </FooterContainer>
     )
