@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react/cjs/react.development';
 import { getOneItem } from '../../actions/item';
 import { API_PUBLIC_ROUTE } from '../../config';
-import { StyledContentWrapper, StyledImageWrapper } from './styled';
+import { StyledContentWrapper, StyledImageWrapper, StyledSharedLinks, StyledSharedLinksItem } from './styled';
 
 const Single = (props)=>{
     
@@ -22,6 +22,14 @@ const Single = (props)=>{
         <StyledContentWrapper>
             <StyledImageWrapper>
                 <img src={`${API_PUBLIC_ROUTE}${itemReducer.screen}`} alt={`capture d'écran ${itemReducer.name}`}/>
+                <StyledSharedLinks>
+                    <StyledSharedLinksItem>
+                        <i className={"fa fa-facebook"}></i>
+                    </StyledSharedLinksItem>
+                    <StyledSharedLinksItem>
+                        <i className={"fa fa-twitter"}></i>
+                    </StyledSharedLinksItem>
+                </StyledSharedLinks>
             </StyledImageWrapper>
         </StyledContentWrapper>
         </>
