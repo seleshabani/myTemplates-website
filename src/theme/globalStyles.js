@@ -27,6 +27,9 @@ body #root{
     height: auto;
     aspect-ratio: 16/9;
 }
+h1{
+    text-transform:capitalize;
+}
 input{
     width: 100%;
     border: none;

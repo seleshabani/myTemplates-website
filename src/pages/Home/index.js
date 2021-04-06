@@ -15,6 +15,7 @@ export const Home = ()=>{
 
     useEffect(()=>{
         dispatch(getAllItems());
+        window.document.querySelector('title').text = 'MyTemplates'
     },[])
 
     const showModal = (e,item) => {

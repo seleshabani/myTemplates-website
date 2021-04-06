@@ -71,8 +71,8 @@ export const StyledIconeMediaWrapper = styled.div`
     justify-content:center;
     align-items:center;
     align-content:center;
-    background:rgba(0,0,0,0.4);
+    background:rgba(0,0,0,0.6);
     font-size:1.3rem;
-    color: ${({color})=>{console.log(color);return color}};
+    color: ${({color})=>{return color}};
     cursor:pointer;
 `
