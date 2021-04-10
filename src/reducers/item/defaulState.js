@@ -1,2 +1,2 @@
 export const defaultState = [];
-export const oneItemDefaultState = {};
+export const oneItemDefaultState = {isLiked:false};

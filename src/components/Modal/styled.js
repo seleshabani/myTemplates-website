@@ -14,6 +14,7 @@ export const StyleModalWrapper = styled.div`
     align-items:center;
     align-content:center;
     visibility:${({visible}) => visible ? 'visible':'hidden'};
+    
 `
 
 export const StyledModal = styled.div`
@@ -25,6 +26,10 @@ export const StyledModal = styled.div`
     padding:20px;
     background:rgba(0,0,0,0.9);
     color:whitesmoke;
+    @media(max-width:800px){
+        padding:10px;
+        width:88%;
+    }
 `
 export const StyledModalTitle = styled.div`
     width:100%;
@@ -47,6 +52,10 @@ export const StyledModalImageAndSocialWrapper = styled.div`
     flex-direction:row;
     align-items:flex-start;
     justify-content:space-between;
+    @media(max-width:800px){
+        flex-direction: column;
+        gap:1rem;
+    }
 `
 export const StyledModalImageWrapper = styled.div`
     border-radius:5px;
@@ -66,7 +75,7 @@ export const StyledSocialModalWrapper = styled.div`
 `
 export const StyledIconeMediaWrapper = styled.div`
     width:100%;
-    padding:5px;
+    padding:8px;
     display:flex;
     justify-content:center;
     align-items:center;
