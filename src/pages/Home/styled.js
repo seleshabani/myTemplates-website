@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const StyledContainerWrapper  = styled.div`
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    @media(max-width:800px){
+        width:100%;
+    }
+`
 export const StyledContainer = styled.div`
     width: 100%;
     padding-top: 20px;
@@ -14,4 +23,12 @@ export const StyledContainer = styled.div`
     @media(max-width:800px){
         flex-direction: column;
     }
+`
+export const StyledPaginatedButton = styled.div`
+    width:100%;
+    & button{
+        width:100%;
+        padding:10px;
+    }
+
 `

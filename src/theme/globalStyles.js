@@ -47,6 +47,7 @@ button{
     border: solid 2px whitesmoke;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    outline:none;
 }
 main{
    width: 90%;

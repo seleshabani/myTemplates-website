@@ -2,9 +2,9 @@ import axios from 'axios';
 import { API_ROUTE } from '../../config';
 import { FETCH_ITEMS, FETCH_ITEMS_ERROR, FETCH_ONE_ITEM } from '../../reducers/item/type';
 
-export const getAllItems = () => async dispatch => {
+export const getAllItems = (pagination) => async dispatch => {
     try {
-        const items = await axios.get(API_ROUTE + 'items');
+        const items = await axios.get(`${API_ROUTE}items?page=${pagination.page}&limit=${pagination.limit}`);
         dispatch({
             type: FETCH_ITEMS,
             payload: items.data
@@ -32,9 +32,9 @@ export const getOneItem = (id) => async dispatch => {
         })
     }
 }
-export const searchItems = (query) => async dispatch => {
+export const searchItems = (query,pagination) => async dispatch => {
     try {
-        const items = await axios.get(API_ROUTE + `items/search/${query}`);
+        const items = await axios.get(API_ROUTE + `items/search/${query}?page=${pagination.page}&limit=${pagination.limit}`);
         dispatch({
             type: FETCH_ITEMS,
             payload: items.data

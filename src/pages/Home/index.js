@@ -4,28 +4,43 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAllItems } from '../../actions/item'
 import Modal from '../../components/Modal'
 import { ShowItems } from '../../hooks/functions'
-import { StyledContainer } from './styled'
+import { StyledContainer, StyledContainerWrapper, StyledPaginatedButton } from './styled'
 
-export const Home = ()=>{
+export const Home = () => {
 
-    const [modalVisible,setModalVisible] = useState(false);
-    const [modalId,setModalId] = useState(0)
+    const [modalVisible, setModalVisible] = useState(false);
+    const [paginate, setPaginate] = useState({ page: 1, limit: 4 })
+    const [modalId, setModalId] = useState(0)
     const dispatch = useDispatch();
-    const itemRootState = useSelector(state=>state.itemReducer);
+    const itemRootState = useSelector(state => state.itemReducer);
 
-    useEffect(()=>{
-        dispatch(getAllItems());
+    useEffect(() => {
+        dispatch(getAllItems(paginate));
         window.document.querySelector('title').text = 'MyTemplates'
-    },[])
+    }, [paginate])
 
-    const showModal = (e,item) => {
-       setModalId(item._id);
-       setModalVisible(!modalVisible);
+    const showModal = (e, item) => {
+        setModalId(item._id);
+        setModalVisible(!modalVisible);
     }
-    return(
-        <StyledContainer>
-            {ShowItems(itemRootState,showModal)}
-            <Modal id={modalId} visible={modalVisible} onClick={()=>{setModalVisible(false)}}/>
-        </StyledContainer>
+    const fetchPaginate = () => {
+        if (itemRootState.next) {
+            setPaginate(itemRootState.next);
+        } else {
+            setPaginate({ page: 1, limit: paginate.limit })
+        }
+    }
+
+    return (
+        <StyledContainerWrapper>
+            <StyledContainer>
+                {ShowItems(itemRootState.results, showModal)}
+            </StyledContainer>
+            <StyledPaginatedButton>
+                <button onClick={fetchPaginate}>{itemRootState.next ? 'voir plus' : 'voir moins'}</button>
+            </StyledPaginatedButton>
+            <Modal id={modalId} visible={modalVisible} onClick={() => { setModalVisible(false) }} />
+        </StyledContainerWrapper>
+
     )
 }

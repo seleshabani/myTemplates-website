@@ -16,7 +16,8 @@ const Search = (props)=>{
 
     useEffect(()=>{
         window.document.querySelector('title').text = `MyTemplates | Recherche | ${SearchQuery}`
-        dispatch(searchItems(SearchQuery));
+        dispatch(searchItems(SearchQuery,{page:1,limit:3}));
+        console.log(itemsReducer)
     },[SearchQuery]);
 
     const showModal = (e,item) => {
@@ -29,7 +30,7 @@ const Search = (props)=>{
             <h1>Résultat de Recherche pour : {SearchQuery}</h1>
             <StyledContentWrapper>
                 <StyledResultWrapper>
-                    {ShowItems(itemsReducer,showModal,true)}
+                    {ShowItems(itemsReducer.results,showModal,true)}
                 </StyledResultWrapper>
             </StyledContentWrapper>
             <Modal id={modalId} visible={modalVisible} onClick={()=>{setModalVisible(false)}}/>
