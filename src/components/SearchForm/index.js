@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
+import { websiteName } from '../../config';
 import { StyledFormContainer, StyledSearchFormWrapper, StyledFormInputContainer } from './styled'
 // import {} from 'react-hook-form'
 const Form = () => {
@@ -9,7 +10,7 @@ const Form = () => {
 
     const submit = (data)=>{
       //  e.preventDefault();
-        history.push(`/search/${data.query}`)
+        history.push(`${websiteName}/search/${data.query}`)
     }
     return (
         <StyledSearchFormWrapper>

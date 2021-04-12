@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { useEffect } from 'react/cjs/react.development'
 import { getOneItem } from '../../actions/item'
 import { addLike, deleteLike, verifLike } from '../../actions/like'
-import { API_PUBLIC_ROUTE } from '../../config'
+import { API_PUBLIC_ROUTE, websiteName } from '../../config'
 import { StyledIconeMediaWrapper, StyledModal,
      StyledModalImageAndSocialWrapper, StyledModalImageWrapper,
       StyledModalTitle, StyledSocialModalWrapper, StyleModalWrapper 
@@ -45,7 +45,7 @@ const Modal = ({ visible, onClick, id }) => {
                     <h2><a href={itemReducer.linkPreview} target="_blank" rel="noopener noreferrer">Live Preview</a></h2>
                     <StyledModalImageAndSocialWrapper>
                         <StyledModalImageWrapper>
-                            <Link to={`/templates/${itemReducer._id}`}>
+                            <Link to={`${websiteName}/templates/${itemReducer._id}`}>
                                 <img src={`${API_PUBLIC_ROUTE}${itemReducer.screen}`} alt={`capture d'écran ${itemReducer.name}`} />
                             </Link>
                         </StyledModalImageWrapper>
