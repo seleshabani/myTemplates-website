@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer/index';
 import Header from './components/Header';
 import { websiteName } from './config';
