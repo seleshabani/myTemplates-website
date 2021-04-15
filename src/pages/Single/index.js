@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 import { getOneItem } from '../../actions/item';
 import { API_PUBLIC_ROUTE } from '../../config';
 import { 

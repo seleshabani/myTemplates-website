@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 import { searchItems } from '../../actions/item';
 import Modal from '../../components/Modal';
 import { ShowItems } from '../../hooks/functions';
