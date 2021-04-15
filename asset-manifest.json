@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/myTemplates-website/static/js/main.af324f97.chunk.js",
-    "main.js.map": "/myTemplates-website/static/js/main.af324f97.chunk.js.map",
+    "main.js": "/myTemplates-website/static/js/main.1b80adbb.chunk.js",
+    "main.js.map": "/myTemplates-website/static/js/main.1b80adbb.chunk.js.map",
     "runtime-main.js": "/myTemplates-website/static/js/runtime-main.6da70c9c.js",
     "runtime-main.js.map": "/myTemplates-website/static/js/runtime-main.6da70c9c.js.map",
-    "static/js/2.5468c6bd.chunk.js": "/myTemplates-website/static/js/2.5468c6bd.chunk.js",
-    "static/js/2.5468c6bd.chunk.js.map": "/myTemplates-website/static/js/2.5468c6bd.chunk.js.map",
+    "static/js/2.a7dd66c6.chunk.js": "/myTemplates-website/static/js/2.a7dd66c6.chunk.js",
+    "static/js/2.a7dd66c6.chunk.js.map": "/myTemplates-website/static/js/2.a7dd66c6.chunk.js.map",
     "index.html": "/myTemplates-website/index.html",
-    "static/js/2.5468c6bd.chunk.js.LICENSE.txt": "/myTemplates-website/static/js/2.5468c6bd.chunk.js.LICENSE.txt"
+    "static/js/2.a7dd66c6.chunk.js.LICENSE.txt": "/myTemplates-website/static/js/2.a7dd66c6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6da70c9c.js",
-    "static/js/2.5468c6bd.chunk.js",
-    "static/js/main.af324f97.chunk.js"
+    "static/js/2.a7dd66c6.chunk.js",
+    "static/js/main.1b80adbb.chunk.js"
   ]
 }
