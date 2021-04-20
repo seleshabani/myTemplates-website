@@ -7,10 +7,10 @@ html{
 body{
     padding: 0;
     margin: 0;
-    background-color: rgb(179, 197, 206);
+    background-color: rgb(13 24 161 / 38%);
 }
 body #root{
-    /* position: relative; */
+    position: relative;
     width:100%;
     height:100%;
     display: flex;
@@ -18,7 +18,29 @@ body #root{
     align-content: center;
     align-items: center;
     justify-content: center;
+    overflow:hidden;
 }
+body #root #tsparticles{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: -1;
+    width:100vw;
+    height:100vh;
+    margin-top:10px;
+    padding:0px;
+    & canvas{
+        width:100%;
+        height:100%;
+    }
+    @media(max-width:800px){
+        display:none;
+    }
+}
+}
+
 *,*::after,*::before{
    box-sizing: inherit; 
 }
@@ -39,10 +61,14 @@ input{
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
     padding: 5px;
 }
+a{
+    color:white;
+    transition: all 300ms;
+}
 button{
     padding: 5px;
     color: whitesmoke;
-    background-color: rgb(179, 197, 206);
+    background: rgba(255, 255, 255,0.1);
     border-radius: 5px;
     border: solid 2px whitesmoke;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
