@@ -5,10 +5,13 @@ import { websiteName } from './config';
 import { Home } from './pages/Home/index';
 import Search from './pages/Search';
 import Single from './pages/Single';
+import Particles from "react-tsparticles";
+import { ParticlesConfig } from './hooks/particlesConfig';
 
 function App() {
   return (
     <>
+    <Particles options={ParticlesConfig}/>
       <main>
         <Header/>
         <Switch>

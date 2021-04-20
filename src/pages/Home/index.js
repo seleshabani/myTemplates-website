@@ -31,16 +31,24 @@ export const Home = () => {
         }
     }
 
-    return (
-        <StyledContainerWrapper>
-            <StyledContainer>
-                {ShowItems(itemRootState.results, showModal)}
-            </StyledContainer>
-            <StyledPaginatedButton>
-                <button onClick={fetchPaginate}>{itemRootState.next ? 'voir plus' : 'voir moins'}</button>
-            </StyledPaginatedButton>
-            <Modal id={modalId} visible={modalVisible} onClick={() => { setModalVisible(false) }} />
-        </StyledContainerWrapper>
-
-    )
+    if (itemRootState.isLoading) {
+        return (
+            <StyledContainerWrapper>
+                <h1>en cours de chargement</h1>
+            </StyledContainerWrapper>
+        )
+        
+    } else {
+        return(
+            <StyledContainerWrapper>
+                <StyledContainer>
+                    {ShowItems(itemRootState.results, showModal)}
+                </StyledContainer>
+                <StyledPaginatedButton>
+                    <button onClick={fetchPaginate}>{itemRootState.next ? 'voir plus' : 'voir moins'}</button>
+                </StyledPaginatedButton>
+                <Modal id={modalId} visible={modalVisible} onClick={() => { setModalVisible(false) }} />
+            </StyledContainerWrapper>
+        )
+    }
 }

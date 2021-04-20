@@ -50,7 +50,7 @@ export const StyledSharedLinksItem = styled.div`
     align-items:center;
     /* border:solid 1px whitesmoke; */
     color:whitesmoke;
-    background-color: rgb(179, 197, 206);
+    background: rgba(255, 255, 255,0.1);
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
     cursor:pointer;
     margin-right:15px;
@@ -69,7 +69,7 @@ export const StyledPreviewLinkItem = styled.div`
     justify-content:center;
     align-items:center;
     color:whitesmoke;
-    background-color: rgb(179, 197, 206);
+    background: rgba(255, 255, 255,0.1);
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
     border-radius:5px;
     cursor:pointer;
