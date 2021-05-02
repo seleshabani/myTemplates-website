@@ -9,11 +9,22 @@ export const StyledItem = styled.div`
     transition: all 300ms;
     object-fit:cover;
     cursor:pointer;
-
+    animation:display 300ms ease-in;
     &:hover{
         transform: translateY(5px);
     }
     @media(max-width:800px){
         width: 100%;
     }
+    @keyframes display{
+        from{
+            opacity:0;
+            transform:translateY(10px);
+        }
+        to{
+            opacity:1;
+            transform:translateY(0px);
+        }
+    }
+
 `
