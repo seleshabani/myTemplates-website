@@ -7,7 +7,7 @@ export const getAllItems = (pagination) => async dispatch => {
         dispatch({
             type:ITEMS_ISLOADING
         })
-        await axios.get(`${API_ROUTE}items?page=${pagination.page}&limit=${pagination.limit}`).then(items=>{
+        await axios.get(`${API_ROUTE}items?page=${pagination.page}&limit=6`).then(items=>{
             dispatch({
                 type:ITEMS_LOADED,
                 payload:items.data

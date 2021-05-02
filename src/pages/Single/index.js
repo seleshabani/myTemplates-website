@@ -21,9 +21,8 @@ const Single = (props)=>{
     },[itemId])
     
     return (
-        <>
-        <h1>{itemReducer.name}</h1>
         <StyledContentWrapper>
+            <h1>{itemReducer.name}</h1>
             <StyledImageWrapper>
                 <img src={`${API_PUBLIC_ROUTE}${itemReducer.screen}`} alt={`capture d'écran ${itemReducer.name}`}/>
                 <StyledLinksBlock>
@@ -50,7 +49,6 @@ const Single = (props)=>{
                 </StyledLinksBlock>
             </StyledImageWrapper>
         </StyledContentWrapper>
-        </>
     )
 }
 export default Single;

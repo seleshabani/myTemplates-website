@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const StyledContentWrapper = styled.div`
-    width:100%;
-    display:flex;
+    /* display:flex;
     flex-direction:row;
     align-items:flex-start;
-    justify-content:space-between;
+    justify-content:space-between; */
+    width:100%;
+    height:80vh;
     @media(max-width:800px){
         flex-direction: column;
         gap:1rem;
@@ -13,6 +14,7 @@ export const StyledContentWrapper = styled.div`
 `
 export const StyledImageWrapper = styled.div`
     width:70%;
+    height: max-content ;
     display:flex;
     flex-direction:column;
     gap:1rem;
@@ -20,6 +22,7 @@ export const StyledImageWrapper = styled.div`
     overflow:hidden;
     & img{
         width:100%;
+        height: 55vh;
         display:inline-block;
     }
     @media(max-width:800px){

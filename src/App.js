@@ -16,6 +16,7 @@ function App() {
         <Header/>
         <Switch>
           <Route exact path={`${websiteName}`} component={Home}/>
+          <Route exact path={`${websiteName}?page=/[0-9]+/`} component={Home}/>
           <Route exact path={`${websiteName}/templates/:id`} component={Single}/>
           <Route exact path={`${websiteName}/search/:query`} component={Search}/>
         </Switch>

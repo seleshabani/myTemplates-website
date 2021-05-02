@@ -10,7 +10,9 @@ const Form = () => {
 
     const submit = (data)=>{
       //  e.preventDefault();
-        history.push(`${websiteName}/search/${data.query}`)
+        if (data.query !== '') {
+            history.push(`${websiteName}/search/${data.query}`)
+        }
     }
     return (
         <StyledSearchFormWrapper>
