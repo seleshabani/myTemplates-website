@@ -9,11 +9,11 @@ export const StyleModalWrapper = styled.div`
     width:100%;
     height:100%;
     background:rgba(0,0,0,0.2);
-    display:flex;
+    /* display:flex; */
     justify-content:center;
     align-items:center;
     align-content:center;
-    visibility:${({visible}) => visible ? 'visible':'hidden'};
+    display:${({visible}) => visible ? 'flex':'none'};
     
 `
 
@@ -26,9 +26,20 @@ export const StyledModal = styled.div`
     padding:20px;
     background:rgba(0,0,0,0.9);
     color:whitesmoke;
+    animation:display 300ms ease;
     @media(max-width:800px){
         padding:10px;
         width:88%;
+    }
+    @keyframes display {
+        from{
+            opacity:0;
+            transform:translateY(10px);
+        }
+        to{
+            opacity:1;
+            transform:translateY(0px);
+        }
     }
 `
 export const StyledModalTitle = styled.div`
